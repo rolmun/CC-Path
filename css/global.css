@@ -2,9 +2,13 @@
 
 body {
   margin: 0;
+  font-size: 16px; /* Increase base font size */
+  line-height: 1.6; /* Increase line height for better readability */
 }
 
-
+h1, h3, h4 {
+    font-weight: 600; /* Make headers slightly bolder */
+}
 /* Header */
 header {
     position: relative;
@@ -49,7 +53,8 @@ button {
     border-width: 1px;
     border-radius: 20px;
     color: white;
-    padding: 7px 13px;
+    font-weight: bold; /* Make button text bolder */
+    padding: 10px 15px; /* Increase padding for better touch target size */
 }
 
 button.sign-up {
@@ -87,10 +92,12 @@ div.banner {
 }
 
 button.more-information {
-    margin-left: 10%;
+    margin-left: 2%;
     margin-bottom: 3%;
-    background-color: darkred;
+    background-color: rgb(110, 9, 9);
+    opacity: 99%;
     font-size: medium;
+     padding: 15px 30px; /* Increase padding for better touch target size */
 }
 
 
@@ -152,14 +159,6 @@ div.movie-list{
     padding: 0px 10% 30px 10%;
 }
 
-/*One hundred and one dalmatians*/
-div.movie-details div.movie-container{
-    display: flex;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
 
 div.movie-list div.poster-container{
     width: 100%;
@@ -176,6 +175,41 @@ div.movie-list div.poster-container button{
     width: 100%;
     background-color: darkred;
     border-color: darkred;
+}
+
+
+/*One hundred and one dalmatians*/
+div.movie-details div.movie-container{
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+/* 
+   Styles for the image within the movie container:
+   - Sets the image to flex display.
+   - Specifies the width and height of the image.
+*/
+div.movie-details div.movie-container img{
+    display: flex;
+    width: 25%;
+    height: 50%;
+}
+/* 
+   Styles for the movie details within the movie container:
+   - Sets the details to flex display with a column direction.
+*/
+div.movie-details div.movie-container dl{
+    display: flex;
+    flex-direction: column;
+}
+/* 
+   General styles for definition lists:
+   - Sets definition lists to flex display with space between items.
+*/
+dl {
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -201,5 +235,27 @@ footer div h3 {
 footer div.apps > img {
     height: 17px;
     margin: 3% 10px
+    
+}
+/* Add transitions for smoother size changes */
+header > nav {
+    transition: all 0.3s ease; /* Apply transition to all properties with 0.3s duration and ease timing function */
+}
+
+.banner {
+    transition: height 0.3s ease; /* Apply transition only to height property with 0.3s duration and ease timing function */
+}
+
+/* Add this media query for screens smaller than 500px */
+@media (max-width: 500px) {
+    div.banner {
+        height: 100px; /* Set a specific height */
+        background-size: cover; /* Cover the container with the background image */
+        background-repeat: no-repeat; /* Prevent the background from repeating */
+    }
+     /* Smooth transition for the banner height */
+    div.banner {
+        transition: height 0.2s ease; /* Apply transition to height property with 0.3s duration and ease timing function */
+    }
     
 }
