@@ -163,6 +163,8 @@ div.movie-list{
 div.movie-list div.poster-container{
     width: 100%;
     height: auto;
+    margin-top: 20px; /*leaving spae from posters */
+    margin-bottom: 25px; /*leaving space for view button*/
 }
 
 div.movie-list div.poster-container img{
