@@ -14,7 +14,7 @@ function generateRandomString(length) {
 };
 
 it('Should return a movie', async  () => {
-    const movieId = 'tt0119212' //This id was extracted from the test API web page
+    const movieId = 'tt0119217' //This id was extracted from the test API web page
     const movie = await get_movie(movieId);
     expect(movie).toEqual(expect.any(Object));
     expect(movie).not.toEqual({});
