@@ -4,7 +4,7 @@ import { expect, jest } from '@jest/globals';
 import { get_movies } from "../javascript/get-movies";
 import { OPTIONS, API_URL } from "../javascript/constants";
 
-import { setupFetchMock } from './mocks/fetchMocks';
+import { setupFetchMock } from './fetchMocks';
 
 it('Should return a list of movies', async  () => {
     const movies = await get_movies();
